@@ -1,0 +1,509 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a1a2e;
+  /* color: #ff6347; */
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e94560;
+}
+
+.navbar .logo span {
+  color: white;
+}
+
+.navbar .menu-toggle {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar .mode-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Modal Styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backface-visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(8px);
+}
+
+.modal-content {
+  /* background-color: #fff; */
+  background-image: url(/images/china-header.jpg);
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.modal-content h2 {
+  margin: 0 0 1rem;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-content label {
+  font-weight: bold;
+}
+
+.modal-content input,
+.modal-content textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 99%;
+}
+
+.modal-content .form-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-content button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.modal-content .cancel-btn {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.modal-content button:hover {
+  opacity: 0.9;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.hero {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the area without distortion */
+  z-index: -1; /* Places the video behind the content */
+}
+
+/* Hero Content Styling */
+.hero-content {
+  position: relative;
+  z-index: -1; /* Ensures content is above the video */
+  color: #f8f8f8; /* Text color for readability */
+}
+
+.hero-content h1 {
+  font-size: 3rem; /* Large font size */
+  color: #e8eee0; /* Attractive blue color */
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  /* transition: transform 0.3s ease, color 0.3s ease; */
+}
+
+.search-bar {
+  display: flex;
+  gap: 0.4em;
+  margin-left: 350px;
+}
+
+.search-bar input, .search-bar select, .search-bar button {
+  padding: 0.75em;
+  font-size: 1em;
+}
+
+.search-bar button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #ff4500;
+}
+
+/* Popular Destinations Grid */
+.card-container {
+  margin-left: 80px;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  padding: 20px;
+}
+
+.card-container h2 {
+  font-size: 26px;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.card-container p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Card styling */
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 320px; /* Larger card width */
+  transition: transform 0.3s;
+  margin: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.image-box {
+  width: 100%;
+  height: 320px; /* Larger height for bigger images */
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images are cropped uniformly */
+  border-bottom: 1px solid #ddd; /* Consistent border at bottom of image */
+}
+
+.content {
+  padding: 15px;
+}
+
+.content h3 {
+  font-size: 22px;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.content p {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+}
+
+/* Browse link styling */
+.grid-item.browse {
+  background: #1a1a2e;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 28px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.grid-item.browse p{
+  color: white;
+  font-size: 20px;
+  gap: 0;
+}
+
+.grid-item.browse a {
+  margin-top: 2px;
+  padding: 0px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.grid-item.browse a:hover {
+  color: #0056b3;
+}
+
+
+/* Benefits section */
+.benefits {
+  padding: 3em 20px;
+  text-align: center;
+}
+
+.benefits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.benefit-item {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 1em;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.benefit-item:hover {
+  transform: scale(1.05);
+}
+
+.benefit-item h3 {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+.benefit-item p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.benefit-item a {
+  color: #ff6347;
+  font-weight: bold;
+}
+
+/* Footer */
+
+
+/* Newsletter Section */
+.newsletter-section {
+  background-color: #1a1a2e;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.newsletter-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.newsletter-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.subscription-form {
+  display: inline-flex;
+  align-items: center;
+}
+
+.subscription-form input[type="email"] {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.subscription-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  -ms-border-radius: 0 4px 4px 0;
+  -o-border-radius: 0 4px 4px 0;
+}
+.subscription-form button:hover {
+  background-color: #fa0000; 
+  color: #ffffff; 
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #f8f8f8;
+  padding: 40px 20px;
+  color: #000000;
+  text-align: center;
+}
+.newsletter-section h2{
+  color: #f5f5f5;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  max-width: 200px;
+  margin: 20px;
+}
+
+.footer-section h2 {
+  font-size: 25px;
+  color: #e94560;
+}
+
+.footer-section h2 span {
+  color: #0f3460;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #000000;
+  text-decoration: none;
+}
+.footer-copy {
+  background-color: #1a1a2e;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Social Media Links Styling */
+.social-links a {
+  color: #1a1a2e; /* Dark color for links */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.social-links a:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.social-links i {
+  margin-right: 8px; /* Space between icon and text */
+  font-size: 1.2rem; /* Icon size */
+}
+
+.social-links a:hover {
+  background-color: #1a1a2e; /* Dark background on hover */
+  color: #ffffff; /* White text on hover */
+}
+
+.social-links a:active {
+  background-color: #555; /* Slightly darker color when clicked */
+}
+
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .navbar nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .grid, .benefits-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+/*video section-2*/
+.video-section-2A {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-left: 80px;
+  border-radius: 20px; 
+}
+

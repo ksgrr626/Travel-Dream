@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Dream</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Travel.<span>Dream</span></div>
+    <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span> <!-- Hamburger Icon -->
+    <nav class="nav-links">
+      <a href="index.html" target="_blank">Home</a>
+      <a href="https://en.wikipedia.org/wiki/World_Tourism_rankings" target="_blank">About</a>
+      <a href="/pages/tourpackage.html" target="_blank">Package</a>
+      <a href="/pages/client.html" target="_blank">Clients</a>
+      <a href="#" onclick="openLoginModal()">Login</a>
+      <a href="#" onclick="openContactForm()">Contact Us</a>
+      
+    </nav>
+  </header>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeLoginModal()">&times;</span>
+      <h2>Login</h2>
+      <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <div class="form-actions">
+          <button type="submit">Login</button>
+          <button type="button" class="cancel-btn" onclick="closeLoginModal()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Contact Us Form -->
+<div id="contactForm" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeContactForm()">&times;</span>
+      <h2>Contact Us</h2>
+      <form id="contactFormElement" onsubmit="handleContactForm(event)">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+        
+        <div class="form-actions">
+          <button type="submit">Send Message</button>
+          <button type="button" class="cancel-btn" onclick="closeContactForm()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <video autoplay muted loop class="background-video">
+      <source src="a1.mp4" type="video/mp4">
+      Fallback content if video doesn't load
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <h1>Travel to live Enjoy</h1>
+      <p>Live your best moments</p>
+    </div>
+  </section>
+
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" placeholder="Where are you going?">
+
+    <!-- Location Dropdown with Country Names -->
+    <select>
+      <option value="">Select Country</option>
+      <option value="USA">United States</option>
+      <option value="Canada">Canada</option>
+      <option value="UK">United Kingdom</option>
+      <option value="Australia">Australia</option>
+      <option value="India">India</option>
+      <option value="Germany">Germany</option>
+      <option value="France">France</option>
+      <option value="Japan">Japan</option>
+      <option value="Italy">Italy</option>
+      <option value="Spain">Spain</option>
+      <option value="Brazil">Brazil</option>
+      <option value="Mexico">Mexico</option>
+      <option value="South Africa">South Africa</option>
+      <option value="China">China</option>
+      <option value="Russia">Russia</option>
+      <option value="Egypt">Egypt</option>
+      <option value="Thailand">Thailand</option>
+      <option value="New Zealand">New Zealand</option>
+      <option value="Indonesia">Indonesia</option>
+      <option value="Turkey">Turkey</option>
+    </select>
+
+    <!-- Tour Package Dropdown -->
+    <select>
+      <option value="">Select Tour Package</option>
+      <option value="Adventure">Adventure</option>
+      <option value="Relaxation">Relaxation</option>
+      <option value="Cultural">Cultural</option>
+      <option value="Romantic">Romantic</option>
+      <option value="Family">Family</option>
+      <option value="Luxury">Luxury</option>
+      <option value="Group">Group</option>
+      <option value="Cruise">Cruise</option>
+      <option value="Eco">Eco-Friendly</option>
+      <option value="Solo">Solo</option>
+    </select>
+
+    <button onclick="search()">Search</button>
+  </div>
+  </div>
+  </section>
+
+   <!-- Popular Destinations Grid Section -->
+   <section class="card-container">
+    <h2>Popular Destinations</h2>
+    <p>You need to come at least once in your life</p>
+
+    <!-- Destination Card 1 -->
+    <div class="card">
+        <div class="image-box">
+            <img src="Venice.jpg" alt="Venice">
+        </div>
+        <div class="content">
+            <h3>Venice</h3>
+            <p>356 Tours, 248 Activities</p>
+        </div>
+    </div>
+  <!-- Destination Card 2 -->
+  <div class="card">
+    <div class="image-box">
+      <img src="Amsterdam.avif" alt="Amsterdam">
+    </div>
+    <div class="content">
+      <h3>Amsterdam</h3>
+      <p>420 Tours, 220 Activities</p>
+    </div>
+  </div>
+
+  <!-- Destination Card 3 -->
+  <div class="card">
+    <div class="image-box">
+      <img src="Budapest.webp" alt="Budapest">
+    </div>
+    <div class="content">
+      <h3>Budapest</h3>
+      <p>120 Tours, 48 Activities</p>
+    </div>
+  </div>
+
+  <!-- Destination Card 4 -->
+  <div class="card">
+    <div class="image-box">
+      <img src="Lisbon.webp" alt="Lisbon">
+    </div>
+    <div class="content">
+      <h3>Lisbon</h3>
+      <p>80 Tours, 24 Activities</p>
+    </div>
+  </div>
+
+  <!-- Destination Card 5 -->
+  <div class="card">
+    <div class="image-box">
+      <img src="London.jpeg" alt="London">
+    </div>
+    <div class="content">
+      <h3>London</h3>
+      <p>126 Tours, 86 Activities</p>
+    </div>
+  </div>
+
+  <!-- Destination Card 6 -->
+  <div class="card">
+    <div class="image-box">
+      <img src="Ottawa.jpg" alt="Ottawa">
+    </div>
+    <div class="content">
+      <h3>Ottawa</h3>
+      <p>86 Tours, 28 Activities</p>
+    </div>
+  </div>
+
+  <!-- Destination Card 7 -->
+  <div class="card">
+    <div class="image-box">
+      <img src="Paris.jpg" alt="Paris">
+    </div>
+    <div class="content">
+      <h3>Paris</h3>
+      <p>146 Tours, 99 Activities</p>
+    </div>
+  </div>
+<!-- Destination Card 7 -->
+<div class="card">
+  <div class="image-box">
+    <img src="dubai-1.jpg" alt="Dubai">
+  </div>
+  <div class="content">
+    <h3>Dubai</h3>
+    <p>20 Tours, 30 Activities</p>
+  </div>
+</div>
+
+<!-- Destination Card 7 -->
+<div class="card">
+  <div class="image-box">
+    <img src="china-header.jpg" alt="China">
+  </div>
+  <div class="content">
+    <h3>China</h3>
+    <p>150 Tours, 90 Activities</p>
+  </div>
+</div>
+
+  <!-- Browse All Destinations Link -->
+  <div class="grid-item browse">
+    <p>Crafting Your Perfect Travel Experience</p>
+    <a href="#">Browse All Destinations &rarr;</a>
+  </div>
+  </section>
+
+  <!-- Video Section -->
+ <section class="video-section-2A">
+   <video autoplay muted loop class="video-section-2A">
+    <source src="travel.mp4" type="video/mp4">
+    Fallback content if video doesn't load
+    Your browser does not support the video tag.
+  
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits">
+    <h2>You will love us</h2>
+    <p>Because more than 268 other customers have loved us too</p>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <h3>Security Assurance</h3>
+        <p>Demonstrates commitment to user data security through encryption and secure payment practices</p>
+        <a href="#">Learn More &rarr;</a>
+      </div>
+      <div class="benefit-item">
+        <h3>Customer Support</h3>
+        <p>Demonstrates commitment to user data security through encryption and secure payment practices</p>
+        <a href="#">Learn More &rarr;</a>
+      </div>
+      <div class="benefit-item">
+        <h3>Transparent Policies</h3>
+        <p>Demonstrates commitment to user data security through encryption and secure payment practices</p>
+        <a href="#">Learn More &rarr;</a>
+      </div>
+      <div class="benefit-item">
+        <h3>Reputable Affiliations</h3>
+        <p>Demonstrates commitment to user data security through encryption and secure payment practices</p>
+        <a href="#">Learn More &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="newsletter-section">
+      <h2>Subscribe to our newsletter for updates</h2>
+      <p>For the best recommendation of your.<br>Please subscribe us.</p>
+      <div class="subscription-form">
+        <input type="email" placeholder="Enter Your Email Here" id="email">
+        <button onclick="subscribe()">SUBSCRIBE</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h2>Travel.<span>Dream</span></h2>
+          <p>Explore the world's best destinations, enjoy unbeatable prices, and book your perfect getaway instantly.
+          </p>
+          <div class="social-icons">
+            <div class="social-links">
+              <a href="https://www.google.com/search?q=kuldeep+singh+jaipur+2707&rlz=1C1VDKB_enIN1135IN1135&oq=kuldeep+singh+jaipur&gs_lcrp=EgZjaHJvbWUqBggAECMYJzIGCAAQIxgnMgYIARBFGDkyBwgCEAAYgAQyCAgDEAAYFhgeMggIBBAAGBYYHjIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDQ2MjNqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8" target="_blank">
+                <i class="fa-brands fa-instagram"></i> Instagram
+              </a>
+              <a href="https://www.instagram.com/kuldeepsingh2707/" target="_blank">
+                <i class="fa-brands fa-facebook"></i> Facebook
+              </a>
+              <a href="https://www.linkedin.com/in/kuldeep-singh-2707ksgrr/" target="_blank">
+                <i class="fa-brands fa-twitter"></i> Twitter
+              </a>
+              <a href="mailto:contact@traveldream.com">
+                <i class="fa-solid fa-envelope"></i> Email Us
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Destinations</h3>
+          <ul>
+            <li><a href="#">China</a></li>
+            <li><a href="#">Venezuela</a></li>
+            <li><a href="#">Brazil</a></li>
+            <li><a href="#">Australia</a></li>
+            <li><a href="#">London</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Our Activities</h3>
+          <ul>
+            <li><a href="#">Trekking</a></li>
+            <li><a href="#">Peak Climbing</a></li>
+            <li><a href="#">Biking</a></li>
+            <li><a href="#">River Rafting</a></li>
+            <li><a href="#">Cultural Tour</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <p class="footer-copy">© 2024 Web Design Mastery. All rights reserved.</p>
+    </footer>
+
+  
+    
+    <!-- <script src="/tour.html/function.js"></script> -->
+    <script src="/java/navbar2.js"></script>
+  <script src="/java/smtp.js"></script>
+
+</body>
+
+</html>

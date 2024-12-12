@@ -1,0 +1,197 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f3f4f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    align-items: center;
+}
+
+/* Main Heading Styles */
+.main-heading {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px;
+    background-color: #1a1a2e;  /* Dark Blue */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.main-heading h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.main-heading p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for Main Heading */
+.main-heading h1:hover {
+    color: #ff5722;  /* Bright Orange */
+    transform: scale(1.1);  /* Slightly enlarge */
+}
+
+.main-heading p:hover {
+    color: #ff9800;  /* Amber */
+    transform: scale(1.05);  /* Slightly enlarge */
+}
+
+/* Top Heading Styles */
+.top-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.top-heading h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.top-heading p {
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: 400;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for Top Heading */
+.top-heading h1:hover {
+    color: #ff5722;  /* Bright Orange */
+    transform: scale(1.1);  /* Slightly enlarge */
+}
+
+.top-heading p:hover {
+    color: #ff9800;  /* Amber */
+    transform: scale(1.05);  /* Slightly enlarge */
+}
+
+
+/* Gallery container */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Tour package card */
+.content {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 320px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.content img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.content:hover img {
+    transform: scale(1.15); /* Zoom-in effect for image */
+}
+
+.content h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 18px 0;
+    font-weight: 600;
+    transition: color 0.4s ease;
+}
+
+.content p {
+    font-size: 1.1rem;
+    color: #555;
+    padding: 0 15px;
+    margin-bottom: 18px;
+    transition: color 0.4s ease;
+}
+
+.content h6 {
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 18px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.content ul li {
+    font-size: 1rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    transition: color 0.4s ease;
+}
+
+.content ul li i {
+    color: #ff5722; /* Icon color */
+    margin-right: 6px;
+}
+
+/* Hover effect for the card */
+.content:hover {
+    transform: translateY(-10px); /* Floating effect */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 2px solid #ff5722; /* Border color on hover */
+}
+
+.content:hover h3, .content:hover p, .content:hover ul li {
+    color: #ff5722; /* Change text color on hover */
+}
+
+/* Book Now button */
+.button {
+    margin: 20px 0;
+}
+
+.book {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book:hover {
+    background-color: #e64a19;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.book:active {
+    transform: translateY(2px); /* Basic Reset */
+}

@@ -1,0 +1,100 @@
+/* Reset and Basic Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+}
+
+/* Client Reviews Section */
+.client-reviews {
+    text-align: center;
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    background-color: #1a1a2e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.client-reviews h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.client-reviews p {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+/* Reviews Container */
+.reviews-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Individual Review Card */
+.review-card {
+    background-color: #162525;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 250px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.review-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.review-text {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.reviewer-title {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* Hover Effects */
+.review-card:hover {
+    background-color: #3a3a4e; /* Darker background color on hover */
+    color: #ffffff; /* White text color */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slightly larger shadow */
+    transform: translateY(-5px); /* Lifts the card a bit */
+}
+
+.review-card:hover .review-text {
+    color: #eeeeee; /* Light color for the review text */
+}
+
+.review-card:hover .reviewer-name {
+    color: #f0a500; /* Complementary gold color for the name */
+}
+
+.review-card:hover .reviewer-title {
+    color: #cccccc; /* Light gray for the title */
+}
